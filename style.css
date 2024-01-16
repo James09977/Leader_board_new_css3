@@ -193,7 +193,62 @@ Top blog styles
     font-size: 14.691px;
     color: #FF4A60;
     text-align: center;
+}
 
+/*--------------
+ Responsive 
+ ---------------*/
 
+/*----------------
+ mobile device 
+ -----------------*/
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
 
+    .players,
+    .blogs,
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player,
+    .blog {
+        flex-direction: column;
+    }
+
+    .blog {
+        align-items: center;
+    }
+
+    .courses {
+        justify-items: center;
+    }
+}
+
+/*------------------
+ Tablate device 
+ -------------------*/
+@media only screen and (min-width: 689px) and (max-width:992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players,
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .courses {
+        grid-row-gap: 20px;
+    }
 }
